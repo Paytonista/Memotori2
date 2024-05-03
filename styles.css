@@ -1,0 +1,176 @@
+body {
+    background-color: #303030;
+    margin: 0vh; /* Resets margin */
+    padding: 0vh; /* Resets padding */
+    font-family: "Kanit", sans-serif; /* Use a custom font */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav_bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #303030;
+    padding: 0vh;
+    margin: 0vh;
+    border-bottom: 0.5px solid #666666;
+}
+
+#add_new_note_button {
+    background-color: #01B075;
+    font-size: 3vh;
+    border-radius: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    color: white;
+    margin-right: 10px;
+    font-family: "Kanit", sans-serif;
+}
+
+
+
+
+/* Optional: Style the navigation links */
+#user_account_bar ul,
+#nav_links ul {
+    list-style-type: none;
+}
+
+#user_account_bar ul li,
+#nav_links ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 10px; /* Add space between list items */
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vh;
+}
+
+.search-icon {
+    font-size: 20px; /* Adjust the size of the icon as needed */
+    margin-right: 5px; /* Adjust the spacing between the icon and the text */
+}
+
+
+
+/* BODY CSS */
+
+#main_content_container {
+    
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar_container {
+    width: 15%;
+    height: 100vh;
+        
+
+    border: 1px solid black;
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+    
+}
+#sidebar_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     
+    
+    
+    
+    background-color: #303030;
+    color: white;
+    
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+
+#sidebar_content a {
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+
+
+/* NOTES AREA*/
+
+#main {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: space-around;  
+    
+}
+.note { 
+	width: 380px; 
+	height: 260px; 
+	background-color: white; 
+	margin: 15px; 
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+	
+} 
+
+.note textarea { 
+	border: none; 
+	width: 95%; 
+	height: 87%; 
+	resize: none; 
+	padding: 10px; 
+	font-size: 18px; 
+	border-radius: 15px; 
+	background-color: beige; 
+	border-radius: 0px 0px 10px 10px; 
+} 
+
+.title-div textarea { 
+	border-radius: 0px 0px 0px 0px; 
+	margin-bottom: -4px; 
+	background-color: #a4cad4; 
+	font-weight: bolder; 
+	font-size: x-large; 
+} 
+
+.note textarea::placeholder {
+    color: white; /* Replace with your desired color */
+}
+
+.title-div textarea::placeholder {
+   color: white;
+
+
+}
+#searchBar {
+    display: none;
+}
+#nav_links_content ul li {
+    display: inline-block; /* Ensure list items are displayed horizontally */
+}
+
+#searchBar {
+    display: none; /* Hide the search bar initially */
+    overflow: hidden; /* Hide overflow content */
+    transition: width 0.3s ease; /* Add transition for width */
+}
+
+@keyframes growInSize {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #searchBar {
+    display: none;
+    animation: 1s ease-out 0s 1 growInSize;
+  }
